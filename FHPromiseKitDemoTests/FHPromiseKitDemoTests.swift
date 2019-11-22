@@ -30,11 +30,24 @@ class FHPromiseKitDemoTests: XCTestCase {
     
     func testThenOperator_pass() {
         let value = 3
-        let result = firstly {
+        firstly {
             return FHPromise(value: value)
         }
-        .done()
-        XCTAssert(value == result)
+        .done { result in
+            XCTAssert(value == result)
+        }
+        
+    }
+    
+    func testMapOperator_pass() {
+        let value = 3
+        firstly {
+            return FHPromise(value: value)
+        }
+        .map {  "\($0)" }
+        .done { result in
+            XCTAssert(result == "\(value)")
+        }
         
     }
 

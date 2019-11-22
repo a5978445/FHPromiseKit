@@ -16,8 +16,12 @@ public class FHPromise<T> {
         self.value = value
     }
     
-    func done() -> T {
-        return value
+    func done(_ process: (T) -> Void)  {
+        return process(value)
+    }
+    
+    func map<R>(_ transform: (T) -> R ) -> FHPromise<R> {
+        return FHPromise<R>(value: transform(value))
     }
     
 
