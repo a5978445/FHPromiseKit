@@ -13,7 +13,19 @@
 		1453A7482387D1DD00C7A5A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1453A7462387D1DD00C7A5A2 /* Main.storyboard */; };
 		1453A74A2387D1DE00C7A5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1453A7492387D1DE00C7A5A2 /* Assets.xcassets */; };
 		1453A74D2387D1DE00C7A5A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1453A74B2387D1DE00C7A5A2 /* LaunchScreen.storyboard */; };
+		1453A7562387D23500C7A5A2 /* FHPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453A7552387D23500C7A5A2 /* FHPromise.swift */; };
+		1453A75E2387D3D900C7A5A2 /* FHPromiseKitDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453A75D2387D3D900C7A5A2 /* FHPromiseKitDemoTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1453A7602387D3D900C7A5A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1453A7352387D1DD00C7A5A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1453A73C2387D1DD00C7A5A2;
+			remoteInfo = FHPromiseKitDemo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1453A73D2387D1DD00C7A5A2 /* FHPromiseKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FHPromiseKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +36,21 @@
 		1453A7492387D1DE00C7A5A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1453A74C2387D1DE00C7A5A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1453A74E2387D1DE00C7A5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1453A7552387D23500C7A5A2 /* FHPromise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHPromise.swift; sourceTree = "<group>"; };
+		1453A75B2387D3D900C7A5A2 /* FHPromiseKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FHPromiseKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1453A75D2387D3D900C7A5A2 /* FHPromiseKitDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHPromiseKitDemoTests.swift; sourceTree = "<group>"; };
+		1453A75F2387D3D900C7A5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1453A73A2387D1DD00C7A5A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1453A7582387D3D900C7A5A2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				1453A73F2387D1DD00C7A5A2 /* FHPromiseKitDemo */,
+				1453A75C2387D3D900C7A5A2 /* FHPromiseKitDemoTests */,
 				1453A73E2387D1DD00C7A5A2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				1453A73D2387D1DD00C7A5A2 /* FHPromiseKitDemo.app */,
+				1453A75B2387D3D900C7A5A2 /* FHPromiseKitDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,12 +84,22 @@
 				1453A7402387D1DD00C7A5A2 /* AppDelegate.swift */,
 				1453A7422387D1DD00C7A5A2 /* SceneDelegate.swift */,
 				1453A7442387D1DD00C7A5A2 /* ViewController.swift */,
+				1453A7552387D23500C7A5A2 /* FHPromise.swift */,
 				1453A7462387D1DD00C7A5A2 /* Main.storyboard */,
 				1453A7492387D1DE00C7A5A2 /* Assets.xcassets */,
 				1453A74B2387D1DE00C7A5A2 /* LaunchScreen.storyboard */,
 				1453A74E2387D1DE00C7A5A2 /* Info.plist */,
 			);
 			path = FHPromiseKitDemo;
+			sourceTree = "<group>";
+		};
+		1453A75C2387D3D900C7A5A2 /* FHPromiseKitDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				1453A75D2387D3D900C7A5A2 /* FHPromiseKitDemoTests.swift */,
+				1453A75F2387D3D900C7A5A2 /* Info.plist */,
+			);
+			path = FHPromiseKitDemoTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +122,24 @@
 			productReference = 1453A73D2387D1DD00C7A5A2 /* FHPromiseKitDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1453A75A2387D3D900C7A5A2 /* FHPromiseKitDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1453A7622387D3D900C7A5A2 /* Build configuration list for PBXNativeTarget "FHPromiseKitDemoTests" */;
+			buildPhases = (
+				1453A7572387D3D900C7A5A2 /* Sources */,
+				1453A7582387D3D900C7A5A2 /* Frameworks */,
+				1453A7592387D3D900C7A5A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1453A7612387D3D900C7A5A2 /* PBXTargetDependency */,
+			);
+			name = FHPromiseKitDemoTests;
+			productName = FHPromiseKitDemoTests;
+			productReference = 1453A75B2387D3D900C7A5A2 /* FHPromiseKitDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +152,10 @@
 				TargetAttributes = {
 					1453A73C2387D1DD00C7A5A2 = {
 						CreatedOnToolsVersion = 11.1;
+					};
+					1453A75A2387D3D900C7A5A2 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 1453A73C2387D1DD00C7A5A2;
 					};
 				};
 			};
@@ -116,6 +173,7 @@
 			projectRoot = "";
 			targets = (
 				1453A73C2387D1DD00C7A5A2 /* FHPromiseKitDemo */,
+				1453A75A2387D3D900C7A5A2 /* FHPromiseKitDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +189,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1453A7592387D3D900C7A5A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -141,10 +206,27 @@
 				1453A7452387D1DD00C7A5A2 /* ViewController.swift in Sources */,
 				1453A7412387D1DD00C7A5A2 /* AppDelegate.swift in Sources */,
 				1453A7432387D1DD00C7A5A2 /* SceneDelegate.swift in Sources */,
+				1453A7562387D23500C7A5A2 /* FHPromise.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1453A7572387D3D900C7A5A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1453A75E2387D3D900C7A5A2 /* FHPromiseKitDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1453A7612387D3D900C7A5A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1453A73C2387D1DD00C7A5A2 /* FHPromiseKitDemo */;
+			targetProxy = 1453A7602387D3D900C7A5A2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1453A7462387D1DD00C7A5A2 /* Main.storyboard */ = {
@@ -316,6 +398,46 @@
 			};
 			name = Release;
 		};
+		1453A7632387D3D900C7A5A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8ML633GQS;
+				INFOPLIST_FILE = FHPromiseKitDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsbc.FHPromiseKitDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FHPromiseKitDemo.app/FHPromiseKitDemo";
+			};
+			name = Debug;
+		};
+		1453A7642387D3D900C7A5A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8ML633GQS;
+				INFOPLIST_FILE = FHPromiseKitDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsbc.FHPromiseKitDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FHPromiseKitDemo.app/FHPromiseKitDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -333,6 +455,15 @@
 			buildConfigurations = (
 				1453A7522387D1DE00C7A5A2 /* Debug */,
 				1453A7532387D1DE00C7A5A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1453A7622387D3D900C7A5A2 /* Build configuration list for PBXNativeTarget "FHPromiseKitDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1453A7632387D3D900C7A5A2 /* Debug */,
+				1453A7642387D3D900C7A5A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
