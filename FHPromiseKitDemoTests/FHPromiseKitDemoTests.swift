@@ -28,7 +28,7 @@ class FHPromiseKitDemoTests: XCTestCase {
         XCTAssert(promise.value == promiseFromFirstlyMethodCreate.value)
     }
     
-    func testThenOperator_pass() {
+    func testDoneOperator_pass() {
         let value = 3
         firstly {
             return FHPromise(value: value)
@@ -50,6 +50,31 @@ class FHPromiseKitDemoTests: XCTestCase {
         }
         
     }
+    
+    func testThenOperator_pass() {
+        let value = 3
+        firstly {
+            return FHPromise(value: value)
+        }
+        .then { FHPromise<Int>(value: $0 + 1) }
+        .done { result in
+            XCTAssert(result == value + 1)
+        }
+    }
+    
+    
+    func testContinuesThenOperator_pass() {
+        let value = 3
+        firstly {
+            return FHPromise(value: value)
+        }
+        .then { FHPromise<Int>(value: $0 + 1) }
+        .then {FHPromise<String>(value: "\($0)") }
+        .done { result in
+            XCTAssert(result == "\(value + 1)")
+        }
+    }
+    
 
     func testExample() {
         // This is an example of a functional test case.

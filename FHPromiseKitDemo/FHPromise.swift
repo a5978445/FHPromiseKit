@@ -8,6 +8,8 @@
 
 import UIKit
 
+//typealias <#type name#> = <#type expression#>
+
 public class FHPromise<T> {
     
     let value: T
@@ -23,6 +25,11 @@ public class FHPromise<T> {
     func map<R>(_ transform: (T) -> R ) -> FHPromise<R> {
         return FHPromise<R>(value: transform(value))
     }
+    
+    func then<R>(_ transform: (T) -> FHPromise<R> ) -> FHPromise<R> {
+        return transform(value)
+    }
+
     
 
 }
