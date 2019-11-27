@@ -15,6 +15,7 @@
 		1453A74D2387D1DE00C7A5A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1453A74B2387D1DE00C7A5A2 /* LaunchScreen.storyboard */; };
 		1453A7562387D23500C7A5A2 /* FHPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453A7552387D23500C7A5A2 /* FHPromise.swift */; };
 		1453A75E2387D3D900C7A5A2 /* FHPromiseKitDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453A75D2387D3D900C7A5A2 /* FHPromiseKitDemoTests.swift */; };
+		14E41D90238E22F1007E120B /* FHSink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E41D8F238E22F1007E120B /* FHSink.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		1453A75B2387D3D900C7A5A2 /* FHPromiseKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FHPromiseKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1453A75D2387D3D900C7A5A2 /* FHPromiseKitDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHPromiseKitDemoTests.swift; sourceTree = "<group>"; };
 		1453A75F2387D3D900C7A5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14E41D8F238E22F1007E120B /* FHSink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHSink.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		1453A73F2387D1DD00C7A5A2 /* FHPromiseKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				14E41D8E238E22D1007E120B /* Core */,
 				1453A7402387D1DD00C7A5A2 /* AppDelegate.swift */,
 				1453A7422387D1DD00C7A5A2 /* SceneDelegate.swift */,
 				1453A7442387D1DD00C7A5A2 /* ViewController.swift */,
@@ -113,6 +116,14 @@
 				1453A75F2387D3D900C7A5A2 /* Info.plist */,
 			);
 			path = FHPromiseKitDemoTests;
+			sourceTree = "<group>";
+		};
+		14E41D8E238E22D1007E120B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				14E41D8F238E22F1007E120B /* FHSink.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +230,7 @@
 			files = (
 				1453A7452387D1DD00C7A5A2 /* ViewController.swift in Sources */,
 				1453A7412387D1DD00C7A5A2 /* AppDelegate.swift in Sources */,
+				14E41D90238E22F1007E120B /* FHSink.swift in Sources */,
 				1453A7432387D1DD00C7A5A2 /* SceneDelegate.swift in Sources */,
 				1453A7562387D23500C7A5A2 /* FHPromise.swift in Sources */,
 			);

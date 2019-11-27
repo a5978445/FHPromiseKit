@@ -105,44 +105,51 @@ public class MergeSink<V, T>: FHSink<T> {
     }
 }
 
-public class FHPromise<T> {
-    var sink: FHSink<T>
+public class FHPromise<T>: Catchable {
 
+    
+    var sink: FHSink<T>
+    
     init(value: T) {
         sink = FHNormalValueSink(value)
     }
-
+    
     init(_ sinkClosure: @escaping (FHSink<T>) -> Void) {
         sink = FHSink<T>()
         sinkClosure(sink)
     }
-
+    
     init(_ sink: FHSink<T>) {
         self.sink = sink
     }
-
-    func done(_ onfulfill: @escaping (T) -> Void) {
+    
+    @discardableResult
+    public func done(_ onfulfill: @escaping (T) -> Void) -> Catchable {
         sink.addfulfillHandle(onfulfill)
+        return self
     }
-
+    
+    public func `catch`(_ errorHandle: @escaping (Error) -> Void)  {
+        sink.addRejectHandle(errorHandle)
+   
+    }
+    
     //
-    func map<R>(_ transform: @escaping (T) -> R) -> FHPromise<R> {
+    public func map<R>(_ transform: @escaping (T) -> R) -> FHPromise<R> {
         return FHPromise<R> { sink in
             self.done { result in
                 sink.fulfill(transform(result))
             }
         }
     }
-
+    
     /// 构建响应链的关键部分
     func then<R>(_ transform: @escaping (T) -> FHPromise<R>) -> FHPromise<R> {
         return FHPromise<R>(MergeSink(source: self, transform: transform))
     }
-
-    func `catch`(_ errorHandle: @escaping (Error) -> Void) {
-        sink.addRejectHandle(errorHandle)
-    }
-
+    
+    
+    
     internal func onEvent(onfulfill: @escaping (T) -> Void, onReject: @escaping (Error) -> Void) {
         sink.addfulfillHandle(onfulfill)
         sink.addRejectHandle(onReject)
@@ -154,6 +161,8 @@ public func firstly<T>(_ createClosure: () -> FHPromise<T>) -> FHPromise<T> {
 }
 
 
-public class Subscriber<T> {
-    
+public protocol Catchable {
+
+    func `catch`(_ errorHandle: @escaping (Error) -> Void)
 }
+

@@ -88,7 +88,7 @@ class FHPromiseKitDemoTests: XCTestCase {
         wait(for: [ex], timeout: 0.5)
     }
 
-    func testError() {
+    func testCatchErrorWithOutDone() {
         let sampleError = NSError(domain: "TestError", code: 999, userInfo: nil)
         var validateError: NSError?
         firstly { () -> FHPromise<Int> in
@@ -102,6 +102,23 @@ class FHPromiseKitDemoTests: XCTestCase {
 
         XCTAssert(validateError == sampleError)
     }
+    
+    func testCatchErrorWithDone() {
+        let sampleError = NSError(domain: "TestError", code: 999, userInfo: nil)
+               var validateError: NSError?
+               firstly { () -> FHPromise<Int> in
+                   FHPromise<Int>.init { sink in
+                       sink.reject(sampleError)
+                   }
+               }
+               .done { _ in }
+               .catch { error in
+                   validateError = error as NSError
+               }
+
+               XCTAssert(validateError == sampleError)
+    }
+    
 
     // 测试第二个promise错误
     func testSecondError() {
