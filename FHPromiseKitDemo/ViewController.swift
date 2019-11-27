@@ -8,6 +8,7 @@
 
 
 import UIKit
+import FHPromiseKit
 
 enum NetworkingResult {
     case success(HTTPURLResponse)
@@ -15,6 +16,8 @@ enum NetworkingResult {
 }
 
 class ViewController: UIViewController {
+    
+    var promise: FHPromise<HTTPURLResponse>!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -52,11 +55,17 @@ class ViewController: UIViewController {
 //                       print("work is done")
 //                   }
 //        }
+        
+        self.promise = createPromise()
+    }
+    
+    override func  viewDidAppear(_ animated: Bool) {
+        print("viewDidAppear")
     }
 
     func createPromise() -> FHPromise<HTTPURLResponse> {
-        return FHPromise.init { resolver in
-            DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + 0.5) {
+        return FHPromise { resolver in
+            DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + 20) {
                 print("async excute")
                 resolver.fulfill(HTTPURLResponse())
             }

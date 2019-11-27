@@ -13,13 +13,39 @@
 		1453A7482387D1DD00C7A5A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1453A7462387D1DD00C7A5A2 /* Main.storyboard */; };
 		1453A74A2387D1DE00C7A5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1453A7492387D1DE00C7A5A2 /* Assets.xcassets */; };
 		1453A74D2387D1DE00C7A5A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1453A74B2387D1DE00C7A5A2 /* LaunchScreen.storyboard */; };
-		1453A7562387D23500C7A5A2 /* FHPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453A7552387D23500C7A5A2 /* FHPromise.swift */; };
 		1453A75E2387D3D900C7A5A2 /* FHPromiseKitDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453A75D2387D3D900C7A5A2 /* FHPromiseKitDemoTests.swift */; };
-		14E41D90238E22F1007E120B /* FHSink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E41D8F238E22F1007E120B /* FHSink.swift */; };
+		14E41D9A238E4C84007E120B /* FHPromiseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 14E41D98238E4C84007E120B /* FHPromiseKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14E41D9D238E4C84007E120B /* FHPromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E41D96238E4C84007E120B /* FHPromiseKit.framework */; };
+		14E41D9E238E4C84007E120B /* FHPromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14E41D96238E4C84007E120B /* FHPromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		14E41DA2238E4CA0007E120B /* FHSink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E41D8F238E22F1007E120B /* FHSink.swift */; };
+		14E41DA3238E4CA3007E120B /* FHPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453A7552387D23500C7A5A2 /* FHPromise.swift */; };
+		14E41DAB238E4D8E007E120B /* FHPromiseKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E41DAA238E4D8E007E120B /* FHPromiseKitTests.swift */; };
+		14E41DAD238E4D8E007E120B /* FHPromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E41D96238E4C84007E120B /* FHPromiseKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		1453A7602387D3D900C7A5A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1453A7352387D1DD00C7A5A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1453A73C2387D1DD00C7A5A2;
+			remoteInfo = FHPromiseKitDemo;
+		};
+		14E41D9B238E4C84007E120B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1453A7352387D1DD00C7A5A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14E41D95238E4C84007E120B;
+			remoteInfo = FHPromiseKit;
+		};
+		14E41DAE238E4D8E007E120B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1453A7352387D1DD00C7A5A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14E41D95238E4C84007E120B;
+			remoteInfo = FHPromiseKit;
+		};
+		14E41DB3238E4DAB007E120B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1453A7352387D1DD00C7A5A2 /* Project object */;
 			proxyType = 1;
@@ -35,6 +61,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				14E41D9E238E4C84007E120B /* FHPromiseKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,6 +82,12 @@
 		1453A75D2387D3D900C7A5A2 /* FHPromiseKitDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHPromiseKitDemoTests.swift; sourceTree = "<group>"; };
 		1453A75F2387D3D900C7A5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14E41D8F238E22F1007E120B /* FHSink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHSink.swift; sourceTree = "<group>"; };
+		14E41D96238E4C84007E120B /* FHPromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FHPromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14E41D98238E4C84007E120B /* FHPromiseKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FHPromiseKit.h; sourceTree = "<group>"; };
+		14E41D99238E4C84007E120B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14E41DA8238E4D8E007E120B /* FHPromiseKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FHPromiseKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14E41DAA238E4D8E007E120B /* FHPromiseKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHPromiseKitTests.swift; sourceTree = "<group>"; };
+		14E41DAC238E4D8E007E120B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14E41D9D238E4C84007E120B /* FHPromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +103,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14E41D93238E4C84007E120B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14E41DA5238E4D8E007E120B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14E41DAD238E4D8E007E120B /* FHPromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +129,8 @@
 			children = (
 				1453A73F2387D1DD00C7A5A2 /* FHPromiseKitDemo */,
 				1453A75C2387D3D900C7A5A2 /* FHPromiseKitDemoTests */,
+				14E41D97238E4C84007E120B /* FHPromiseKit */,
+				14E41DA9238E4D8E007E120B /* FHPromiseKitTests */,
 				1453A73E2387D1DD00C7A5A2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,6 +140,8 @@
 			children = (
 				1453A73D2387D1DD00C7A5A2 /* FHPromiseKitDemo.app */,
 				1453A75B2387D3D900C7A5A2 /* FHPromiseKitDemoTests.xctest */,
+				14E41D96238E4C84007E120B /* FHPromiseKit.framework */,
+				14E41DA8238E4D8E007E120B /* FHPromiseKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,11 +149,9 @@
 		1453A73F2387D1DD00C7A5A2 /* FHPromiseKitDemo */ = {
 			isa = PBXGroup;
 			children = (
-				14E41D8E238E22D1007E120B /* Core */,
 				1453A7402387D1DD00C7A5A2 /* AppDelegate.swift */,
 				1453A7422387D1DD00C7A5A2 /* SceneDelegate.swift */,
 				1453A7442387D1DD00C7A5A2 /* ViewController.swift */,
-				1453A7552387D23500C7A5A2 /* FHPromise.swift */,
 				1453A7462387D1DD00C7A5A2 /* Main.storyboard */,
 				1453A7492387D1DE00C7A5A2 /* Assets.xcassets */,
 				1453A74B2387D1DE00C7A5A2 /* LaunchScreen.storyboard */,
@@ -122,11 +173,42 @@
 			isa = PBXGroup;
 			children = (
 				14E41D8F238E22F1007E120B /* FHSink.swift */,
+				1453A7552387D23500C7A5A2 /* FHPromise.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
+		14E41D97238E4C84007E120B /* FHPromiseKit */ = {
+			isa = PBXGroup;
+			children = (
+				14E41D8E238E22D1007E120B /* Core */,
+				14E41D98238E4C84007E120B /* FHPromiseKit.h */,
+				14E41D99238E4C84007E120B /* Info.plist */,
+			);
+			path = FHPromiseKit;
+			sourceTree = "<group>";
+		};
+		14E41DA9238E4D8E007E120B /* FHPromiseKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				14E41DAA238E4D8E007E120B /* FHPromiseKitTests.swift */,
+				14E41DAC238E4D8E007E120B /* Info.plist */,
+			);
+			path = FHPromiseKitTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		14E41D91238E4C84007E120B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14E41D9A238E4C84007E120B /* FHPromiseKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		1453A73C2387D1DD00C7A5A2 /* FHPromiseKitDemo */ = {
@@ -141,6 +223,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				14E41D9C238E4C84007E120B /* PBXTargetDependency */,
 			);
 			name = FHPromiseKitDemo;
 			productName = FHPromiseKitDemo;
@@ -165,6 +248,43 @@
 			productReference = 1453A75B2387D3D900C7A5A2 /* FHPromiseKitDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		14E41D95238E4C84007E120B /* FHPromiseKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14E41D9F238E4C84007E120B /* Build configuration list for PBXNativeTarget "FHPromiseKit" */;
+			buildPhases = (
+				14E41D91238E4C84007E120B /* Headers */,
+				14E41D92238E4C84007E120B /* Sources */,
+				14E41D93238E4C84007E120B /* Frameworks */,
+				14E41D94238E4C84007E120B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FHPromiseKit;
+			productName = FHPromiseKit;
+			productReference = 14E41D96238E4C84007E120B /* FHPromiseKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		14E41DA7238E4D8E007E120B /* FHPromiseKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14E41DB0238E4D8E007E120B /* Build configuration list for PBXNativeTarget "FHPromiseKitTests" */;
+			buildPhases = (
+				14E41DA4238E4D8E007E120B /* Sources */,
+				14E41DA5238E4D8E007E120B /* Frameworks */,
+				14E41DA6238E4D8E007E120B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14E41DAF238E4D8E007E120B /* PBXTargetDependency */,
+				14E41DB4238E4DAB007E120B /* PBXTargetDependency */,
+			);
+			name = FHPromiseKitTests;
+			productName = FHPromiseKitTests;
+			productReference = 14E41DA8238E4D8E007E120B /* FHPromiseKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -179,6 +299,13 @@
 						CreatedOnToolsVersion = 11.1;
 					};
 					1453A75A2387D3D900C7A5A2 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 1453A73C2387D1DD00C7A5A2;
+					};
+					14E41D95238E4C84007E120B = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					14E41DA7238E4D8E007E120B = {
 						CreatedOnToolsVersion = 11.1;
 						TestTargetID = 1453A73C2387D1DD00C7A5A2;
 					};
@@ -199,6 +326,8 @@
 			targets = (
 				1453A73C2387D1DD00C7A5A2 /* FHPromiseKitDemo */,
 				1453A75A2387D3D900C7A5A2 /* FHPromiseKitDemoTests */,
+				14E41D95238E4C84007E120B /* FHPromiseKit */,
+				14E41DA7238E4D8E007E120B /* FHPromiseKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -221,6 +350,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		14E41D94238E4C84007E120B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14E41DA6238E4D8E007E120B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -230,9 +373,7 @@
 			files = (
 				1453A7452387D1DD00C7A5A2 /* ViewController.swift in Sources */,
 				1453A7412387D1DD00C7A5A2 /* AppDelegate.swift in Sources */,
-				14E41D90238E22F1007E120B /* FHSink.swift in Sources */,
 				1453A7432387D1DD00C7A5A2 /* SceneDelegate.swift in Sources */,
-				1453A7562387D23500C7A5A2 /* FHPromise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +385,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		14E41D92238E4C84007E120B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14E41DA2238E4CA0007E120B /* FHSink.swift in Sources */,
+				14E41DA3238E4CA3007E120B /* FHPromise.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14E41DA4238E4D8E007E120B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14E41DAB238E4D8E007E120B /* FHPromiseKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -251,6 +409,21 @@
 			isa = PBXTargetDependency;
 			target = 1453A73C2387D1DD00C7A5A2 /* FHPromiseKitDemo */;
 			targetProxy = 1453A7602387D3D900C7A5A2 /* PBXContainerItemProxy */;
+		};
+		14E41D9C238E4C84007E120B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14E41D95238E4C84007E120B /* FHPromiseKit */;
+			targetProxy = 14E41D9B238E4C84007E120B /* PBXContainerItemProxy */;
+		};
+		14E41DAF238E4D8E007E120B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14E41D95238E4C84007E120B /* FHPromiseKit */;
+			targetProxy = 14E41DAE238E4D8E007E120B /* PBXContainerItemProxy */;
+		};
+		14E41DB4238E4DAB007E120B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1453A73C2387D1DD00C7A5A2 /* FHPromiseKitDemo */;
+			targetProxy = 14E41DB3238E4DAB007E120B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -391,6 +564,7 @@
 		1453A7522387D1DE00C7A5A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8ML633GQS;
@@ -413,6 +587,7 @@
 		1453A7532387D1DE00C7A5A2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8ML633GQS;
@@ -472,6 +647,100 @@
 			};
 			name = Release;
 		};
+		14E41DA0238E4C84007E120B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = F8ML633GQS;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FHPromiseKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsbc.FHPromiseKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		14E41DA1238E4C84007E120B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = F8ML633GQS;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FHPromiseKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsbc.FHPromiseKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		14E41DB1238E4D8E007E120B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8ML633GQS;
+				INFOPLIST_FILE = FHPromiseKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsbc.FHPromiseKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FHPromiseKitDemo.app/FHPromiseKitDemo";
+			};
+			name = Debug;
+		};
+		14E41DB2238E4D8E007E120B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8ML633GQS;
+				INFOPLIST_FILE = FHPromiseKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsbc.FHPromiseKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FHPromiseKitDemo.app/FHPromiseKitDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -498,6 +767,24 @@
 			buildConfigurations = (
 				1453A7632387D3D900C7A5A2 /* Debug */,
 				1453A7642387D3D900C7A5A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14E41D9F238E4C84007E120B /* Build configuration list for PBXNativeTarget "FHPromiseKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14E41DA0238E4C84007E120B /* Debug */,
+				14E41DA1238E4C84007E120B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14E41DB0238E4D8E007E120B /* Build configuration list for PBXNativeTarget "FHPromiseKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14E41DB1238E4D8E007E120B /* Debug */,
+				14E41DB2238E4D8E007E120B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
