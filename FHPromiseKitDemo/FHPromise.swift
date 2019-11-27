@@ -13,6 +13,7 @@ import UIKit
  * 严格的单元测试
  * 线程安全
  * 更完整的功能
+ * 生命周期管理
 
  */
 
@@ -22,32 +23,47 @@ public class FHSink<T> {
         case reject(Error)
     }
 
-    var event: Event?
-    var onfulfill: ((T) -> Void)? {
+    var event: Event? {
         didSet {
-            if let onfulfill = onfulfill, case let .fulfill(value) = event {
-                onfulfill(value)
+            guard let event = event else {
+                return
+            }
+            
+            switch event {
+            case let .fulfill(value):
+                onfulfills.forEach { $0(value) }
+            case let .reject(error):
+                onRejects.forEach { $0(error) }
             }
         }
     }
+    var onfulfills = [(T) -> Void]()
 
-    var onReject: ((Error) -> Void)? {
-        didSet {
-            if let onReject = onReject, case let .reject(error) = event {
-                onReject(error)
-            }
-        }
-    }
+    var onRejects = [(Error) -> Void]()
 
     func fulfill(_ value: T) {
         event = .fulfill(value)
-        onfulfill?(value)
+     
     }
 
     func reject(_ error: Error) {
         event = .reject(error)
-        onReject?(error)
     }
+    
+    func addfulfillHandle(_ handle: @escaping (T) -> Void) {
+        onfulfills.append(handle)
+        if case let .fulfill(value) = event {
+            handle(value)
+        }
+    }
+    
+    func addRejectHandle(_ handle: @escaping (Error) -> Void) {
+        onRejects.append(handle)
+        if case let .reject(error) = event {
+            handle(error)
+        }
+    }
+    
 
 //    func subscribe(onfulfill: (T) -> (), onError: Error) {
 //
@@ -61,7 +77,7 @@ public class FHNormalValueSink<T>: FHSink<T> {
     }
 }
 
-// 这个类是构建相应链的关键
+// 这个类是构建响应链的关键
 // 如果不能减少范型的数量，随着相应链长度增加，范型数量必然增加
 // 这里通过继承的方式，成功减少最终的范型数量
 public class MergeSink<V, T>: FHSink<T> {
@@ -106,7 +122,7 @@ public class FHPromise<T> {
     }
 
     func done(_ onfulfill: @escaping (T) -> Void) {
-        sink.onfulfill = onfulfill
+        sink.addfulfillHandle(onfulfill)
     }
 
     //
@@ -124,15 +140,20 @@ public class FHPromise<T> {
     }
 
     func `catch`(_ errorHandle: @escaping (Error) -> Void) {
-        sink.onReject = errorHandle
+        sink.addRejectHandle(errorHandle)
     }
 
     internal func onEvent(onfulfill: @escaping (T) -> Void, onReject: @escaping (Error) -> Void) {
-        sink.onfulfill = onfulfill
-        sink.onReject = onReject
+        sink.addfulfillHandle(onfulfill)
+        sink.addRejectHandle(onReject)
     }
 }
 
 public func firstly<T>(_ createClosure: () -> FHPromise<T>) -> FHPromise<T> {
     return createClosure()
+}
+
+
+public class Subscriber<T> {
+    
 }

@@ -130,6 +130,41 @@ class FHPromiseKitDemoTests: XCTestCase {
         wait(for: [ex], timeout: 0.5)
         XCTAssert(validateError == sampleError)
     }
+    
+    func testMutipleSubscirbe() {
+        let ex = XCTestExpectation()
+        var subscribe1Excute =  false
+        var subscribe2Excute = false
+        var subscribe3Excute = false
+
+       let promise = firstly { () -> FHPromise<Int> in
+            FHPromise<Int>.init { sink in
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.25) {
+                    sink.fulfill(3)
+                }
+            }
+        }
+        promise.done { _ in
+            subscribe1Excute = true
+            
+        }
+        
+        promise.done { _ in
+            subscribe2Excute = true
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
+            promise.done { _ in
+                subscribe3Excute = true
+                ex.fulfill()
+            }
+        }
+
+        wait(for: [ex], timeout: 3)
+        XCTAssertTrue(subscribe1Excute)
+        XCTAssertTrue(subscribe2Excute)
+        XCTAssertTrue(subscribe3Excute)
+    }
 
     func testExample() {
         // This is an example of a functional test case.

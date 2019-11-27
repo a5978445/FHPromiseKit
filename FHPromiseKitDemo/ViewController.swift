@@ -6,7 +6,7 @@
 //  Copyright © 2019 HSBC Holdings plc. All rights reserved.
 //
 
-import PromiseKit
+
 import UIKit
 
 enum NetworkingResult {
@@ -33,18 +33,18 @@ class ViewController: UIViewController {
             }
         }
 
-        let promise = firstly { () -> Promise<HTTPURLResponse> in
+        let promise = firstly { () -> FHPromise<HTTPURLResponse> in
             return createPromise()
         }
 
         promise.done { _ in
             print("work is done")
         }
-        .catch { _ in
-        }
-        .finally {
-            print("finally excute")
-        }
+//        .catch { _ in
+//        }
+//        .finally {
+//            print("finally excute")
+//        }
 //
 //
 //        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.0) {
@@ -54,8 +54,8 @@ class ViewController: UIViewController {
 //        }
     }
 
-    func createPromise() -> Promise<HTTPURLResponse> {
-        return Promise.init { resolver in
+    func createPromise() -> FHPromise<HTTPURLResponse> {
+        return FHPromise.init { resolver in
             DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + 0.5) {
                 print("async excute")
                 resolver.fulfill(HTTPURLResponse())

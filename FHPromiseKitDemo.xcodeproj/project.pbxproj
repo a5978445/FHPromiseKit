@@ -15,8 +15,6 @@
 		1453A74D2387D1DE00C7A5A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1453A74B2387D1DE00C7A5A2 /* LaunchScreen.storyboard */; };
 		1453A7562387D23500C7A5A2 /* FHPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453A7552387D23500C7A5A2 /* FHPromise.swift */; };
 		1453A75E2387D3D900C7A5A2 /* FHPromiseKitDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453A75D2387D3D900C7A5A2 /* FHPromiseKitDemoTests.swift */; };
-		1453A7672387E37A00C7A5A2 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1453A7652387E36A00C7A5A2 /* PromiseKit.framework */; };
-		1453A7682387E37A00C7A5A2 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1453A7652387E36A00C7A5A2 /* PromiseKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +34,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1453A7682387E37A00C7A5A2 /* PromiseKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,7 +53,6 @@
 		1453A75B2387D3D900C7A5A2 /* FHPromiseKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FHPromiseKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1453A75D2387D3D900C7A5A2 /* FHPromiseKitDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHPromiseKitDemoTests.swift; sourceTree = "<group>"; };
 		1453A75F2387D3D900C7A5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1453A7652387E36A00C7A5A2 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +60,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1453A7672387E37A00C7A5A2 /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +76,6 @@
 		1453A7342387D1DD00C7A5A2 = {
 			isa = PBXGroup;
 			children = (
-				1453A7652387E36A00C7A5A2 /* PromiseKit.framework */,
 				1453A73F2387D1DD00C7A5A2 /* FHPromiseKitDemo */,
 				1453A75C2387D3D900C7A5A2 /* FHPromiseKitDemoTests */,
 				1453A73E2387D1DD00C7A5A2 /* Products */,
